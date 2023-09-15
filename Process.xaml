@@ -1,4 +1,4 @@
-<Activity mc:Ignorable="sap sap2010" x:Class="Process" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:av="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:s="clr-namespace:System;assembly=mscorlib" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data" xmlns:snm="clr-namespace:System.Net.Mail;assembly=System" xmlns:uascw="clr-namespace:UiPath.Activities.System.Compression.Workflow;assembly=UiPath.System.Activities" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+<Activity mc:Ignorable="sap sap2010" x:Class="Process" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:av="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:s="clr-namespace:System;assembly=mscorlib" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
   <x:Members>
     <x:Property sap2010:Annotation.AnnotationText="Dictionary structure to store configuration data of the process (settings, constants and assets)." Name="in_Config" Type="InArgument(scg:Dictionary(x:String, x:Object))" />
     <x:Property Name="io_i_stepIdx" Type="InOutArgument(x:Int32)" />
@@ -15,7 +15,7 @@
   <mva:VisualBasic.Settings>
     <x:Null />
   </mva:VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>982,1125</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>1235,1125</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>ProcessTransaction_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <scg:List x:TypeArguments="x:String" Capacity="78">
@@ -139,9 +139,9 @@
             </scg:Dictionary>
           </sap:WorkflowViewStateService.ViewState>
           <Flowchart.StartNode>
-            <x:Reference>__ReferenceID7</x:Reference>
+            <x:Reference>__ReferenceID8</x:Reference>
           </Flowchart.StartNode>
-          <FlowStep x:Name="__ReferenceID7">
+          <FlowStep x:Name="__ReferenceID8">
             <sap:WorkflowViewStateService.ViewState>
               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                 <av:Point x:Key="ShapeLocation">200,4</av:Point>
@@ -164,7 +164,7 @@
                         <OutArgument x:TypeArguments="x:Int32">[g_i_finalStepIdx]</OutArgument>
                       </ui:AssignOperation.To>
                       <ui:AssignOperation.Value>
-                        <InArgument x:TypeArguments="x:Int32">1</InArgument>
+                        <InArgument x:TypeArguments="x:Int32">2</InArgument>
                       </ui:AssignOperation.Value>
                     </ui:AssignOperation>
                     <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_8">
@@ -224,7 +224,7 @@
               </If>
             </Sequence>
             <FlowStep.Next>
-              <FlowDecision x:Name="__ReferenceID4" Condition="[g_i_stepIdx &lt;= g_i_finalStepIdx]" DisplayName="FinalStep_YN" sap:VirtualizedContainerService.HintSize="76,87" sap2010:WorkflowViewState.IdRef="FlowDecision_2">
+              <FlowDecision x:Name="__ReferenceID5" Condition="[g_i_stepIdx &lt;= g_i_finalStepIdx]" DisplayName="FinalStep_YN" sap:VirtualizedContainerService.HintSize="76,87" sap2010:WorkflowViewState.IdRef="FlowDecision_2">
                 <sap:WorkflowViewStateService.ViewState>
                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
                     <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -235,7 +235,7 @@
                   </scg:Dictionary>
                 </sap:WorkflowViewStateService.ViewState>
                 <FlowDecision.True>
-                  <FlowStep x:Name="__ReferenceID5">
+                  <FlowStep x:Name="__ReferenceID6">
                     <sap:WorkflowViewStateService.ViewState>
                       <scg:Dictionary x:TypeArguments="x:String, x:Object">
                         <av:Point x:Key="ShapeLocation">9.44166666666666,509.02</av:Point>
@@ -243,7 +243,7 @@
                         <av:PointCollection x:Key="ConnectorLocation">209.441666666667,535.02 300,535.02 300,438.5</av:PointCollection>
                       </scg:Dictionary>
                     </sap:WorkflowViewStateService.ViewState>
-                    <Flowchart DisplayName="MainProcess" sap:VirtualizedContainerService.HintSize="200,52" sap2010:WorkflowViewState.IdRef="Flowchart_1">
+                    <Flowchart DisplayName="MainProcess" sap:VirtualizedContainerService.HintSize="1256,906" sap2010:WorkflowViewState.IdRef="Flowchart_1">
                       <sap:WorkflowViewStateService.ViewState>
                         <scg:Dictionary x:TypeArguments="x:String, x:Object">
                           <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -255,26 +255,27 @@
                         </scg:Dictionary>
                       </sap:WorkflowViewStateService.ViewState>
                       <Flowchart.StartNode>
-                        <x:Reference>__ReferenceID3</x:Reference>
+                        <x:Reference>__ReferenceID4</x:Reference>
                       </Flowchart.StartNode>
-                      <FlowSwitch x:TypeArguments="x:Int32" x:Name="__ReferenceID0" DisplayName="Next Step" Expression="[g_i_stepIdx]" sap:VirtualizedContainerService.HintSize="70,87" sap2010:WorkflowViewState.IdRef="FlowSwitch`1_1">
+                      <FlowSwitch x:TypeArguments="x:Int32" x:Name="__ReferenceID1" DisplayName="Next Step" Expression="[g_i_stepIdx]" sap:VirtualizedContainerService.HintSize="70,87" sap2010:WorkflowViewState.IdRef="FlowSwitch`1_1">
                         <sap:WorkflowViewStateService.ViewState>
                           <scg:Dictionary x:TypeArguments="x:String, x:Object">
                             <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                             <av:Point x:Key="ShapeLocation">95,465.5</av:Point>
                             <av:Size x:Key="ShapeSize">70,87</av:Size>
-                            <av:PointCollection x:Key="1Connector">165,509 195,509 195,343 635,343 635,373</av:PointCollection>
+                            <av:PointCollection x:Key="1Connector">165,509 195,509 195,429 235,429</av:PointCollection>
+                            <av:PointCollection x:Key="2Connector">165,509 195,509 195,591 235,591</av:PointCollection>
                           </scg:Dictionary>
                         </sap:WorkflowViewStateService.ViewState>
                         <FlowStep x:Key="1" x:Name="__ReferenceID2">
                           <sap:WorkflowViewStateService.ViewState>
                             <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                              <av:Point x:Key="ShapeLocation">535,373</av:Point>
+                              <av:Point x:Key="ShapeLocation">235,373</av:Point>
                               <av:Size x:Key="ShapeSize">200,112</av:Size>
-                              <av:PointCollection x:Key="ConnectorLocation">735,429 765,429 765,509 795,509</av:PointCollection>
+                              <av:PointCollection x:Key="ConnectorLocation">435,429 465,429 465,509 595,509</av:PointCollection>
                             </scg:Dictionary>
                           </sap:WorkflowViewStateService.ViewState>
-                          <Sequence sap2010:Annotation.AnnotationText="주문서수집(자동)" DisplayName="Step1" sap:VirtualizedContainerService.HintSize="200,112" sap2010:WorkflowViewState.IdRef="Sequence_9">
+                          <Sequence sap2010:Annotation.AnnotationText="미전송건 전송" DisplayName="Step1" sap:VirtualizedContainerService.HintSize="200,112" sap2010:WorkflowViewState.IdRef="Sequence_9">
                             <Sequence.Variables>
                               <Variable x:TypeArguments="x:String" Name="io_dt_" />
                               <Variable x:TypeArguments="x:Boolean" Name="b_stdExcelExi" />
@@ -302,10 +303,10 @@
                             </ui:InvokeWorkflowFile>
                           </Sequence>
                           <FlowStep.Next>
-                            <FlowStep x:Name="__ReferenceID1">
+                            <FlowStep x:Name="__ReferenceID0">
                               <sap:WorkflowViewStateService.ViewState>
                                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                  <av:Point x:Key="ShapeLocation">795,468.5</av:Point>
+                                  <av:Point x:Key="ShapeLocation">595,468.5</av:Point>
                                   <av:Size x:Key="ShapeSize">200,81</av:Size>
                                 </scg:Dictionary>
                               </sap:WorkflowViewStateService.ViewState>
@@ -350,8 +351,47 @@
                             </FlowStep>
                           </FlowStep.Next>
                         </FlowStep>
+                        <FlowStep x:Key="2" x:Name="__ReferenceID3">
+                          <sap:WorkflowViewStateService.ViewState>
+                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                              <av:Point x:Key="ShapeLocation">235,535</av:Point>
+                              <av:Size x:Key="ShapeSize">200,112</av:Size>
+                              <av:PointCollection x:Key="ConnectorLocation">435,591 465,591 465,509 595,509</av:PointCollection>
+                            </scg:Dictionary>
+                          </sap:WorkflowViewStateService.ViewState>
+                          <Sequence sap2010:Annotation.AnnotationText="실패건 전송" DisplayName="Step2" sap:VirtualizedContainerService.HintSize="496,377" sap2010:WorkflowViewState.IdRef="Sequence_52">
+                            <Sequence.Variables>
+                              <Variable x:TypeArguments="x:String" Name="io_dt_" />
+                              <Variable x:TypeArguments="x:Boolean" Name="b_stdExcelExi" />
+                            </Sequence.Variables>
+                            <sap:WorkflowViewStateService.ViewState>
+                              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                              </scg:Dictionary>
+                            </sap:WorkflowViewStateService.ViewState>
+                            <Assign sap:VirtualizedContainerService.HintSize="434,82" sap2010:WorkflowViewState.IdRef="Assign_14">
+                              <Assign.To>
+                                <OutArgument x:TypeArguments="x:Int32">[g_i_perStepIdx]</OutArgument>
+                              </Assign.To>
+                              <Assign.Value>
+                                <InArgument x:TypeArguments="x:Int32">1</InArgument>
+                              </Assign.Value>
+                            </Assign>
+                            <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Step_2.xaml - Invoke Workflow File" sap:VirtualizedContainerService.HintSize="434,113" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_12" LogEntry="No" LogExit="No" UnSafe="False" WorkflowFileName="Step\Step_2.xaml">
+                              <ui:InvokeWorkflowFile.Arguments>
+                                <InArgument x:TypeArguments="scg:Dictionary(x:String, x:Object)" x:Key="in_Config">[in_Config]</InArgument>
+                                <InArgument x:TypeArguments="x:String" x:Key="in_s_startDate">[io_s_startDateTime]</InArgument>
+                                <InArgument x:TypeArguments="scg:Dictionary(x:String, x:Object)" x:Key="in_out_param">[in_out_param]</InArgument>
+                              </ui:InvokeWorkflowFile.Arguments>
+                            </ui:InvokeWorkflowFile>
+                          </Sequence>
+                          <FlowStep.Next>
+                            <x:Reference>__ReferenceID0</x:Reference>
+                          </FlowStep.Next>
+                        </FlowStep>
                       </FlowSwitch>
-                      <FlowStep x:Name="__ReferenceID3">
+                      <FlowStep x:Name="__ReferenceID4">
                         <sap:WorkflowViewStateService.ViewState>
                           <scg:Dictionary x:TypeArguments="x:String, x:Object">
                             <av:Point x:Key="ShapeLocation">30,127.5</av:Point>
@@ -393,261 +433,20 @@
                           <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="579,92" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Info" Message="[g_s_logText]" />
                         </Sequence>
                         <FlowStep.Next>
-                          <x:Reference>__ReferenceID0</x:Reference>
+                          <x:Reference>__ReferenceID1</x:Reference>
                         </FlowStep.Next>
                       </FlowStep>
-                      <x:Reference>__ReferenceID1</x:Reference>
+                      <x:Reference>__ReferenceID0</x:Reference>
                       <x:Reference>__ReferenceID2</x:Reference>
-                      <FlowStep>
-                        <sap:WorkflowViewStateService.ViewState>
-                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                            <av:Point x:Key="ShapeLocation">830,64</av:Point>
-                            <av:Size x:Key="ShapeSize">200,112</av:Size>
-                          </scg:Dictionary>
-                        </sap:WorkflowViewStateService.ViewState>
-                        <Sequence sap2010:Annotation.AnnotationText="압축 후 메일발송" DisplayName="Step4" sap:VirtualizedContainerService.HintSize="200,112" sap2010:WorkflowViewState.IdRef="Sequence_11">
-                          <sap:WorkflowViewStateService.ViewState>
-                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                              <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
-                            </scg:Dictionary>
-                          </sap:WorkflowViewStateService.ViewState>
-                          <uascw:CompressFiles CompressedFileInfo="{x:Null}" CompressedResource="{x:Null}" Password="{x:Null}" ResourcesToArchive="{x:Null}" SecurePassword="{x:Null}" CodePage="Default" CompressedFileName="[io_s_std_fileName.Replace(&quot;xlsx&quot;,&quot;zip&quot;)]" CompressionLevel="Normal" DisplayName="Compress/Zip Files" EncryptionAlgorithm="Classic" sap:VirtualizedContainerService.HintSize="582,223" sap2010:WorkflowViewState.IdRef="CompressFiles_1" OverrideExistingFile="True">
-                            <uascw:CompressFiles.ContentToArchive>
-                              <scg:List x:TypeArguments="InArgument(x:String)" Capacity="4">
-                                <InArgument x:TypeArguments="x:String">[in_Config("attr03").ToString]</InArgument>
-                              </scg:List>
-                            </uascw:CompressFiles.ContentToArchive>
-                          </uascw:CompressFiles>
-                          <ui:ForEach x:TypeArguments="x:Object" CurrentIndex="{x:Null}" DisplayName="For Each" sap:VirtualizedContainerService.HintSize="582,664" sap2010:WorkflowViewState.IdRef="ForEach`1_6" Values="[Directory.GetFiles(in_Config(&quot;attr23&quot;).ToString)]">
-                            <ui:ForEach.Body>
-                              <ActivityAction x:TypeArguments="x:Object">
-                                <ActivityAction.Argument>
-                                  <DelegateInArgument x:TypeArguments="x:Object" Name="item" />
-                                </ActivityAction.Argument>
-                                <Sequence DisplayName="본문" sap:VirtualizedContainerService.HintSize="546,530" sap2010:WorkflowViewState.IdRef="Sequence_33">
-                                  <sap:WorkflowViewStateService.ViewState>
-                                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                                    </scg:Dictionary>
-                                  </sap:WorkflowViewStateService.ViewState>
-                                  <If Condition="[CInt(DateTime.Now.AddDays(-7).ToString(&quot;yyyyMMdd&quot;))&gt;CInt(Directory.GetLastWriteTime(item.ToString).ToString(&quot;yyyyMMdd&quot;))]" sap:VirtualizedContainerService.HintSize="484,408" sap2010:WorkflowViewState.IdRef="If_8">
-                                    <If.Then>
-                                      <Sequence sap:VirtualizedContainerService.HintSize="400,211" sap2010:WorkflowViewState.IdRef="Sequence_34">
-                                        <sap:WorkflowViewStateService.ViewState>
-                                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                                          </scg:Dictionary>
-                                        </sap:WorkflowViewStateService.ViewState>
-                                        <ui:DeleteFileX DisplayName="Delete File" sap:VirtualizedContainerService.HintSize="338,89" sap2010:WorkflowViewState.IdRef="DeleteFileX_1" Path="[item.ToString]" />
-                                      </Sequence>
-                                    </If.Then>
-                                    <If.Else>
-                                      <Sequence sap2010:WorkflowViewState.IdRef="Sequence_35">
-                                        <sap:WorkflowViewStateService.ViewState>
-                                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                                          </scg:Dictionary>
-                                        </sap:WorkflowViewStateService.ViewState>
-                                      </Sequence>
-                                    </If.Else>
-                                  </If>
-                                </Sequence>
-                              </ActivityAction>
-                            </ui:ForEach.Body>
-                          </ui:ForEach>
-                          <ui:CopyFile ContinueOnError="{x:Null}" Destination="[in_Config(&quot;attr23&quot;).ToString+io_s_std_fileName.Substring(io_s_std_fileName.LastIndexOf(&quot;\&quot;),io_s_std_fileName.Length-io_s_std_fileName.LastIndexOf(&quot;\&quot;)).Replace(&quot;xlsx&quot;,&quot;zip&quot;)]" DisplayName="Copy File" sap:VirtualizedContainerService.HintSize="582,162" sap2010:WorkflowViewState.IdRef="CopyFile_1" Overwrite="True" Path="[io_s_std_fileName.Replace(&quot;xlsx&quot;,&quot;zip&quot;)]" />
-                        </Sequence>
-                      </FlowStep>
-                      <FlowStep>
-                        <sap:WorkflowViewStateService.ViewState>
-                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                            <av:Point x:Key="ShapeLocation">830,204</av:Point>
-                            <av:Size x:Key="ShapeSize">200,112</av:Size>
-                          </scg:Dictionary>
-                        </sap:WorkflowViewStateService.ViewState>
-                        <Sequence sap2010:Annotation.AnnotationText="압축 후 메일발송" DisplayName="Step5" sap:VirtualizedContainerService.HintSize="200,112" sap2010:WorkflowViewState.IdRef="Sequence_23">
-                          <Sequence.Variables>
-                            <Variable x:TypeArguments="scg:List(snm:MailMessage)" Name="msgList" />
-                          </Sequence.Variables>
-                          <sap:WorkflowViewStateService.ViewState>
-                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                              <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
-                            </scg:Dictionary>
-                          </sap:WorkflowViewStateService.ViewState>
-                          <ui:GetOutlookMailMessages Account="{x:Null}" Filter="{x:Null}" FilterByMessageIds="{x:Null}" TimeoutMS="{x:Null}" DisplayName="Get Outlook Mail Messages" GetAttachements="False" sap:VirtualizedContainerService.HintSize="1073,25" sap2010:WorkflowViewState.IdRef="GetOutlookMailMessages_4" MailFolder="[in_Config.item(&quot;attr20&quot;).ToString]" MarkAsRead="False" Messages="[msgList]" OnlyUnreadMessages="False" OrderByDate="NewestFirst" Top="30" />
-                          <ui:ForEach x:TypeArguments="snm:MailMessage" CurrentIndex="{x:Null}" DisplayName="For Each" sap:VirtualizedContainerService.HintSize="1073,1459" sap2010:WorkflowViewState.IdRef="ForEach`1_4" Values="[msgList]">
-                            <ui:ForEach.Body>
-                              <ActivityAction x:TypeArguments="snm:MailMessage">
-                                <ActivityAction.Argument>
-                                  <DelegateInArgument x:TypeArguments="snm:MailMessage" Name="msg" />
-                                </ActivityAction.Argument>
-                                <Sequence DisplayName="본문" sap:VirtualizedContainerService.HintSize="1037,1333" sap2010:WorkflowViewState.IdRef="Sequence_29">
-                                  <Sequence.Variables>
-                                    <Variable x:TypeArguments="x:String" Name="s_to" />
-                                  </Sequence.Variables>
-                                  <sap:WorkflowViewStateService.ViewState>
-                                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                                    </scg:Dictionary>
-                                  </sap:WorkflowViewStateService.ViewState>
-                                  <Sequence DisplayName="메일 작성변수" sap:VirtualizedContainerService.HintSize="975,1222" sap2010:WorkflowViewState.IdRef="Sequence_28">
-                                    <Sequence.Variables>
-                                      <Variable x:TypeArguments="x:String" Name="s_cc" />
-                                      <Variable x:TypeArguments="x:String" Name="s_mailBody" />
-                                      <Variable x:TypeArguments="x:String" Name="s_mailTitle" />
-                                    </Sequence.Variables>
-                                    <sap:WorkflowViewStateService.ViewState>
-                                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                                      </scg:Dictionary>
-                                    </sap:WorkflowViewStateService.ViewState>
-                                    <If Condition="[msg.CC.ToString.Length &gt;0]" sap:VirtualizedContainerService.HintSize="913,242" sap2010:WorkflowViewState.IdRef="If_6">
-                                      <If.Then>
-                                        <Assign sap:VirtualizedContainerService.HintSize="434,82" sap2010:WorkflowViewState.IdRef="Assign_10">
-                                          <Assign.To>
-                                            <OutArgument x:TypeArguments="x:String">[s_cc]</OutArgument>
-                                          </Assign.To>
-                                          <Assign.Value>
-                                            <InArgument x:TypeArguments="x:String">[msg.CC.ToString]</InArgument>
-                                          </Assign.Value>
-                                        </Assign>
-                                      </If.Then>
-                                      <If.Else>
-                                        <Assign sap:VirtualizedContainerService.HintSize="434,82" sap2010:WorkflowViewState.IdRef="Assign_11">
-                                          <Assign.To>
-                                            <OutArgument x:TypeArguments="x:String">[s_cc]</OutArgument>
-                                          </Assign.To>
-                                          <Assign.Value>
-                                            <InArgument x:TypeArguments="x:String">
-                                              <Literal x:TypeArguments="x:String" Value="" />
-                                            </InArgument>
-                                          </Assign.Value>
-                                        </Assign>
-                                      </If.Else>
-                                    </If>
-                                    <ui:MultipleAssign DisplayName="Multiple Assign" sap:VirtualizedContainerService.HintSize="913,101" sap2010:WorkflowViewState.IdRef="MultipleAssign_9">
-                                      <ui:MultipleAssign.AssignOperations>
-                                        <scg:List x:TypeArguments="ui:AssignOperation" Capacity="4">
-                                          <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_24">
-                                            <ui:AssignOperation.To>
-                                              <OutArgument x:TypeArguments="x:String">[s_to]</OutArgument>
-                                            </ui:AssignOperation.To>
-                                            <ui:AssignOperation.Value>
-                                              <InArgument x:TypeArguments="x:String">[msg.From.ToString]</InArgument>
-                                            </ui:AssignOperation.Value>
-                                          </ui:AssignOperation>
-                                        </scg:List>
-                                      </ui:MultipleAssign.AssignOperations>
-                                    </ui:MultipleAssign>
-                                    <ui:MoveOutlookMessage Account="{x:Null}" DisplayName="Move Outlook Mail Message" sap:VirtualizedContainerService.HintSize="913,92" sap2010:WorkflowViewState.IdRef="MoveOutlookMessage_4" MailFolder="[in_Config.item(&quot;attr21&quot;).ToString]" MailMessage="[msg]" />
-                                    <Sequence sap:VirtualizedContainerService.HintSize="913,364" sap2010:WorkflowViewState.IdRef="Sequence_43">
-                                      <Sequence.Variables>
-                                        <Variable x:TypeArguments="x:String" Name="s_mailLog" />
-                                      </Sequence.Variables>
-                                      <sap:WorkflowViewStateService.ViewState>
-                                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                                        </scg:Dictionary>
-                                      </sap:WorkflowViewStateService.ViewState>
-                                      <ui:ReadTextFile File="{x:Null}" Content="[s_mailLog]" DisplayName="Read Text File" FileName="C:\Users\admin\Desktop\mailSendLog.txt" sap:VirtualizedContainerService.HintSize="388,80" sap2010:WorkflowViewState.IdRef="ReadTextFile_1" />
-                                      <ui:WriteTextFile File="{x:Null}" DisplayName="Write Text File" FileName="C:\Users\admin\Desktop\mailSendLog.txt" sap:VirtualizedContainerService.HintSize="388,133" sap2010:WorkflowViewState.IdRef="WriteTextFile_1" Text="[s_mailLog+Environment.NewLine+&quot;----------------------------------------------------&quot;+Environment.NewLine+DateTime.Now.ToString(&quot;yyyyMMdd hhmmss&quot;)+Environment.NewLine+s_to+Environment.NewLine+s_cc+Environment.NewLine+in_Config.item(&quot;attr27&quot;).ToString.Replace(&quot;$mailFrom&quot;,s_to).Replace(&quot;$MM&quot;,Today.ToString(&quot;MM&quot;)).Replace(&quot;$dd&quot;,Today.ToString(&quot;dd&quot;))+Environment.NewLine+in_Config.Item(&quot;attr28&quot;).ToString.Replace(&quot;$startTime&quot;,io_s_startTime).Replace(&quot;$endTime&quot;,DateTime.Now.ToString(&quot;HH:mm:ss&quot;)).Replace(&quot;$spenTime&quot;,(Convert.ToDateTime(Datetime.Now.ToString(&quot;HH:mm:ss&quot;))-Convert.ToDateTime(io_s_startTime)).ToString()).Replace(&quot;$manager&quot;,in_Config.Item(&quot;attr05&quot;).ToString).Replace(&quot;$Maile&quot;,in_Config.Item(&quot;attr06&quot;).ToString).Replace(&quot;$Phone&quot;,in_Config.Item(&quot;attr07&quot;).ToString).Replace(&quot;$coment1&quot;,g_s_imgErrorNo).Replace(&quot;$coment2&quot;,in_Config(&quot;attr24&quot;).ToString+io_s_std_fileName.Substring(io_s_std_fileName.LastIndexOf(&quot;\&quot;),io_s_std_fileName.Length-io_s_std_fileName.LastIndexOf(&quot;\&quot;)).Replace(&quot;.xlsx&quot;,&quot;.zip&quot;))]" />
-                                    </Sequence>
-                                    <ui:SendMail Bcc="{x:Null}" From="{x:Null}" MailMessage="{x:Null}" Name="{x:Null}" ReplyTo="{x:Null}" SecurePassword="{x:Null}" TimeoutMS="{x:Null}" UseOAuth="{x:Null}" Body="[in_Config.Item(&quot;attr28&quot;).ToString.Replace(&quot;$startTime&quot;,io_s_startTime).Replace(&quot;$endTime&quot;,DateTime.Now.ToString(&quot;HH:mm:ss&quot;)).Replace(&quot;$spenTime&quot;,(Convert.ToDateTime(Datetime.Now.ToString(&quot;HH:mm:ss&quot;))-Convert.ToDateTime(io_s_startTime)).ToString()).Replace(&quot;$manager&quot;,in_Config.Item(&quot;attr05&quot;).ToString).Replace(&quot;$Maile&quot;,in_Config.Item(&quot;attr06&quot;).ToString).Replace(&quot;$Phone&quot;,in_Config.Item(&quot;attr07&quot;).ToString).Replace(&quot;$coment1&quot;,g_s_imgErrorNo).Replace(&quot;$coment2&quot;,in_Config(&quot;attr24&quot;).ToString+io_s_std_fileName.Substring(io_s_std_fileName.LastIndexOf(&quot;\&quot;),io_s_std_fileName.Length-io_s_std_fileName.LastIndexOf(&quot;\&quot;)).Replace(&quot;.xlsx&quot;,&quot;.zip&quot;))]" Cc="[s_cc]" DisplayName="Send SMTP Mail Message" Email="rpa001@cowellfashion.co.kr" EnableSSL="True" sap:VirtualizedContainerService.HintSize="913,152" sap2010:WorkflowViewState.IdRef="SendMail_1" IgnoreCRL="False" IsBodyHtml="False" Password="cowell2023!!" Port="25" SecureConnection="Auto" Server="riskmng.cowellfashion.co.kr" Subject="[in_Config.item(&quot;attr27&quot;).ToString.Replace(&quot;$mailFrom&quot;,s_to).Replace(&quot;$MM&quot;,Today.ToString(&quot;MM&quot;)).Replace(&quot;$dd&quot;,Today.ToString(&quot;dd&quot;))]" To="[s_to]">
-                                      <ui:SendMail.Files>
-                                        <scg:List x:TypeArguments="InArgument(x:String)" Capacity="0" />
-                                      </ui:SendMail.Files>
-                                    </ui:SendMail>
-                                  </Sequence>
-                                </Sequence>
-                              </ActivityAction>
-                            </ui:ForEach.Body>
-                            <sap:WorkflowViewStateService.ViewState>
-                              <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                                <x:Boolean x:Key="IsPinned">False</x:Boolean>
-                              </scg:Dictionary>
-                            </sap:WorkflowViewStateService.ViewState>
-                          </ui:ForEach>
-                          <ui:MultipleAssign DisplayName="Multiple Assign" sap:VirtualizedContainerService.HintSize="1073,225" sap2010:WorkflowViewState.IdRef="MultipleAssign_10">
-                            <ui:MultipleAssign.AssignOperations>
-                              <scg:List x:TypeArguments="ui:AssignOperation" Capacity="8">
-                                <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_25">
-                                  <ui:AssignOperation.To>
-                                    <OutArgument x:TypeArguments="x:String">[io_s_startTime]</OutArgument>
-                                  </ui:AssignOperation.To>
-                                  <ui:AssignOperation.Value>
-                                    <InArgument x:TypeArguments="x:String">[DateTime.Now.ToString("HH:mm:ss")]</InArgument>
-                                  </ui:AssignOperation.Value>
-                                </ui:AssignOperation>
-                                <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_26">
-                                  <ui:AssignOperation.To>
-                                    <OutArgument x:TypeArguments="x:Int32">[g_i_stepIdx]</OutArgument>
-                                  </ui:AssignOperation.To>
-                                  <ui:AssignOperation.Value>
-                                    <InArgument x:TypeArguments="x:Int32">0</InArgument>
-                                  </ui:AssignOperation.Value>
-                                </ui:AssignOperation>
-                                <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_27">
-                                  <ui:AssignOperation.To>
-                                    <OutArgument x:TypeArguments="x:Int32">[g_i_perStepIdx]</OutArgument>
-                                  </ui:AssignOperation.To>
-                                  <ui:AssignOperation.Value>
-                                    <InArgument x:TypeArguments="x:Int32">0</InArgument>
-                                  </ui:AssignOperation.Value>
-                                </ui:AssignOperation>
-                                <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_28">
-                                  <ui:AssignOperation.To>
-                                    <OutArgument x:TypeArguments="x:String">[io_s_startDateTime]</OutArgument>
-                                  </ui:AssignOperation.To>
-                                  <ui:AssignOperation.Value>
-                                    <InArgument x:TypeArguments="x:String">[DateTime.Now.ToString("yyyMMdd")]</InArgument>
-                                  </ui:AssignOperation.Value>
-                                </ui:AssignOperation>
-                                <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_33">
-                                  <ui:AssignOperation.To>
-                                    <OutArgument x:TypeArguments="x:String">[g_s_imgErrorNo]</OutArgument>
-                                  </ui:AssignOperation.To>
-                                  <ui:AssignOperation.Value>
-                                    <InArgument x:TypeArguments="x:String">이미지경로 오류 :</InArgument>
-                                  </ui:AssignOperation.Value>
-                                </ui:AssignOperation>
-                              </scg:List>
-                            </ui:MultipleAssign.AssignOperations>
-                            <sap:WorkflowViewStateService.ViewState>
-                              <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                                <x:Boolean x:Key="IsPinned">False</x:Boolean>
-                              </scg:Dictionary>
-                            </sap:WorkflowViewStateService.ViewState>
-                          </ui:MultipleAssign>
-                          <Sequence DisplayName="파일삭제" sap:VirtualizedContainerService.HintSize="1073,396" sap2010:WorkflowViewState.IdRef="Sequence_30">
-                            <sap:WorkflowViewStateService.ViewState>
-                              <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                                <x:Boolean x:Key="IsPinned">False</x:Boolean>
-                              </scg:Dictionary>
-                            </sap:WorkflowViewStateService.ViewState>
-                            <ui:Delete ResourceFile="{x:Null}" ContinueOnError="True" sap:VirtualizedContainerService.HintSize="388,133" sap2010:WorkflowViewState.IdRef="Delete_3" Path="[in_Config(&quot;attr01&quot;).ToString]" />
-                            <ui:CreateDirectory Output="{x:Null}" sap2010:Annotation.AnnotationText="메일첨부파일 저장폴더" ContinueOnError="True" DisplayName="기본 폴더 생성" sap:VirtualizedContainerService.HintSize="388,112" sap2010:WorkflowViewState.IdRef="CreateDirectory_4" Path="[in_Config(&quot;attr01&quot;).ToString]">
-                              <sap:WorkflowViewStateService.ViewState>
-                                <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                  <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
-                                </scg:Dictionary>
-                              </sap:WorkflowViewStateService.ViewState>
-                            </ui:CreateDirectory>
-                          </Sequence>
-                        </Sequence>
-                      </FlowStep>
+                      <x:Reference>__ReferenceID3</x:Reference>
                     </Flowchart>
                     <FlowStep.Next>
-                      <x:Reference>__ReferenceID4</x:Reference>
+                      <x:Reference>__ReferenceID5</x:Reference>
                     </FlowStep.Next>
                   </FlowStep>
                 </FlowDecision.True>
                 <FlowDecision.False>
-                  <FlowStep x:Name="__ReferenceID6">
+                  <FlowStep x:Name="__ReferenceID7">
                     <sap:WorkflowViewStateService.ViewState>
                       <scg:Dictionary x:TypeArguments="x:String, x:Object">
                         <av:Point x:Key="ShapeLocation">388,354.5</av:Point>
@@ -727,9 +526,9 @@
               </FlowDecision>
             </FlowStep.Next>
           </FlowStep>
-          <x:Reference>__ReferenceID4</x:Reference>
           <x:Reference>__ReferenceID5</x:Reference>
           <x:Reference>__ReferenceID6</x:Reference>
+          <x:Reference>__ReferenceID7</x:Reference>
         </Flowchart>
       </TryCatch.Try>
       <TryCatch.Catches>
