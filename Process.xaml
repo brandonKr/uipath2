@@ -100,7 +100,6 @@
       <AssemblyReference>UiPath.System.Activities.Design</AssemblyReference>
       <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
       <AssemblyReference>WindowsBase</AssemblyReference>
-      <AssemblyReference>System.Runtime.WindowsRuntime</AssemblyReference>
     </scg:List>
   </TextExpression.ReferencesForImplementation>
   <Sequence sap2010:Annotation.AnnotationText="" DisplayName="Process" sap:VirtualizedContainerService.HintSize="822,1060" sap2010:WorkflowViewState.IdRef="Sequence_1">
@@ -150,7 +149,7 @@
                 <av:PointCollection x:Key="ConnectorLocation">300,202 300,351.5</av:PointCollection>
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
-            <Sequence sap2010:Annotation.AnnotationText="초기변수설정&#xA;g_i_stepIdx : 진행 step컨트롤&#xA;g_i_perStepIdx : 선행 step컨트롤(선행작업 없으면 0)&#xA;g_i_finalStepIdx : 총 step 컨트롤&#xA;" DisplayName="InitProcess" sap:VirtualizedContainerService.HintSize="200,198" sap2010:WorkflowViewState.IdRef="Sequence_2">
+            <Sequence sap2010:Annotation.AnnotationText="초기변수설정&#xA;g_i_stepIdx : 진행 step컨트롤&#xA;g_i_perStepIdx : 선행 step컨트롤(선행작업 없으면 0)&#xA;g_i_finalStepIdx : 총 step 컨트롤&#xA;" DisplayName="InitProcess" sap:VirtualizedContainerService.HintSize="594,1236" sap2010:WorkflowViewState.IdRef="Sequence_2">
               <sap:WorkflowViewStateService.ViewState>
                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
                   <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -296,6 +295,90 @@
                             <av:PointCollection x:Key="2Connector">165,509 195,509 195,591 235,591</av:PointCollection>
                           </scg:Dictionary>
                         </sap:WorkflowViewStateService.ViewState>
+                        <FlowStep x:Key="2" x:Name="__ReferenceID3">
+                          <sap:WorkflowViewStateService.ViewState>
+                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                              <av:Point x:Key="ShapeLocation">235,535</av:Point>
+                              <av:Size x:Key="ShapeSize">200,112</av:Size>
+                              <av:PointCollection x:Key="ConnectorLocation">435,591 465,591 465,509 595,509</av:PointCollection>
+                            </scg:Dictionary>
+                          </sap:WorkflowViewStateService.ViewState>
+                          <Sequence sap2010:Annotation.AnnotationText="실패건 전송" DisplayName="Step2" sap:VirtualizedContainerService.HintSize="200,112" sap2010:WorkflowViewState.IdRef="Sequence_52">
+                            <Sequence.Variables>
+                              <Variable x:TypeArguments="x:String" Name="io_dt_" />
+                              <Variable x:TypeArguments="x:Boolean" Name="b_stdExcelExi" />
+                            </Sequence.Variables>
+                            <sap:WorkflowViewStateService.ViewState>
+                              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                              </scg:Dictionary>
+                            </sap:WorkflowViewStateService.ViewState>
+                            <Assign sap:VirtualizedContainerService.HintSize="434,82" sap2010:WorkflowViewState.IdRef="Assign_14">
+                              <Assign.To>
+                                <OutArgument x:TypeArguments="x:Int32">[g_i_perStepIdx]</OutArgument>
+                              </Assign.To>
+                              <Assign.Value>
+                                <InArgument x:TypeArguments="x:Int32">1</InArgument>
+                              </Assign.Value>
+                            </Assign>
+                            <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Step_2.xaml - Invoke Workflow File" sap:VirtualizedContainerService.HintSize="434,113" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_12" LogEntry="No" LogExit="No" UnSafe="False" WorkflowFileName="Step\Step_2.xaml">
+                              <ui:InvokeWorkflowFile.Arguments>
+                                <InArgument x:TypeArguments="scg:Dictionary(x:String, x:Object)" x:Key="in_Config">[in_Config]</InArgument>
+                                <InArgument x:TypeArguments="x:String" x:Key="in_s_startDate">[io_s_startDateTime]</InArgument>
+                                <InArgument x:TypeArguments="scg:Dictionary(x:String, x:Object)" x:Key="in_out_param">[in_out_param]</InArgument>
+                              </ui:InvokeWorkflowFile.Arguments>
+                            </ui:InvokeWorkflowFile>
+                          </Sequence>
+                          <FlowStep.Next>
+                            <FlowStep x:Name="__ReferenceID0">
+                              <sap:WorkflowViewStateService.ViewState>
+                                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                  <av:Point x:Key="ShapeLocation">595,468.5</av:Point>
+                                  <av:Size x:Key="ShapeSize">200,81</av:Size>
+                                </scg:Dictionary>
+                              </sap:WorkflowViewStateService.ViewState>
+                              <Sequence DisplayName="Processing" sap:VirtualizedContainerService.HintSize="200,81" sap2010:WorkflowViewState.IdRef="Sequence_8">
+                                <sap:WorkflowViewStateService.ViewState>
+                                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                  </scg:Dictionary>
+                                </sap:WorkflowViewStateService.ViewState>
+                                <Assign sap:VirtualizedContainerService.HintSize="434,81" sap2010:WorkflowViewState.IdRef="Assign_3">
+                                  <Assign.To>
+                                    <OutArgument x:TypeArguments="x:String">[g_s_logText]</OutArgument>
+                                  </Assign.To>
+                                  <Assign.Value>
+                                    <InArgument x:TypeArguments="x:String">["Step" + g_i_stepIdx.ToString+"Start"]</InArgument>
+                                  </Assign.Value>
+                                </Assign>
+                                <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="434,92" sap2010:WorkflowViewState.IdRef="LogMessage_2" Level="Info" Message="[g_s_logText]" />
+                                <ui:MultipleAssign DisplayName="Multiple Assign" sap:VirtualizedContainerService.HintSize="434,132" sap2010:WorkflowViewState.IdRef="MultipleAssign_2">
+                                  <ui:MultipleAssign.AssignOperations>
+                                    <scg:List x:TypeArguments="ui:AssignOperation" Capacity="4">
+                                      <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_6">
+                                        <ui:AssignOperation.To>
+                                          <OutArgument x:TypeArguments="x:Int32">[g_i_perStepIdx]</OutArgument>
+                                        </ui:AssignOperation.To>
+                                        <ui:AssignOperation.Value>
+                                          <InArgument x:TypeArguments="x:Int32">[g_i_stepIdx]</InArgument>
+                                        </ui:AssignOperation.Value>
+                                      </ui:AssignOperation>
+                                      <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_17">
+                                        <ui:AssignOperation.To>
+                                          <OutArgument x:TypeArguments="x:Int32">[g_i_stepIdx]</OutArgument>
+                                        </ui:AssignOperation.To>
+                                        <ui:AssignOperation.Value>
+                                          <InArgument x:TypeArguments="x:Int32">[g_i_stepIdx+1]</InArgument>
+                                        </ui:AssignOperation.Value>
+                                      </ui:AssignOperation>
+                                    </scg:List>
+                                  </ui:MultipleAssign.AssignOperations>
+                                </ui:MultipleAssign>
+                              </Sequence>
+                            </FlowStep>
+                          </FlowStep.Next>
+                        </FlowStep>
                         <FlowStep x:Key="1" x:Name="__ReferenceID2">
                           <sap:WorkflowViewStateService.ViewState>
                             <scg:Dictionary x:TypeArguments="x:String, x:Object">
@@ -332,90 +415,6 @@
                             </ui:InvokeWorkflowFile>
                           </Sequence>
                           <FlowStep.Next>
-                            <FlowStep x:Name="__ReferenceID0">
-                              <sap:WorkflowViewStateService.ViewState>
-                                <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                  <av:Point x:Key="ShapeLocation">595,468.5</av:Point>
-                                  <av:Size x:Key="ShapeSize">200,81</av:Size>
-                                </scg:Dictionary>
-                              </sap:WorkflowViewStateService.ViewState>
-                              <Sequence DisplayName="Processing" sap:VirtualizedContainerService.HintSize="200,81" sap2010:WorkflowViewState.IdRef="Sequence_8">
-                                <sap:WorkflowViewStateService.ViewState>
-                                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                                  </scg:Dictionary>
-                                </sap:WorkflowViewStateService.ViewState>
-                                <Assign sap:VirtualizedContainerService.HintSize="434,82" sap2010:WorkflowViewState.IdRef="Assign_3">
-                                  <Assign.To>
-                                    <OutArgument x:TypeArguments="x:String">[g_s_logText]</OutArgument>
-                                  </Assign.To>
-                                  <Assign.Value>
-                                    <InArgument x:TypeArguments="x:String">["Step" + g_i_stepIdx.ToString+"Start"]</InArgument>
-                                  </Assign.Value>
-                                </Assign>
-                                <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="434,92" sap2010:WorkflowViewState.IdRef="LogMessage_2" Level="Info" Message="[g_s_logText]" />
-                                <ui:MultipleAssign DisplayName="Multiple Assign" sap:VirtualizedContainerService.HintSize="434,132" sap2010:WorkflowViewState.IdRef="MultipleAssign_2">
-                                  <ui:MultipleAssign.AssignOperations>
-                                    <scg:List x:TypeArguments="ui:AssignOperation" Capacity="4">
-                                      <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_6">
-                                        <ui:AssignOperation.To>
-                                          <OutArgument x:TypeArguments="x:Int32">[g_i_perStepIdx]</OutArgument>
-                                        </ui:AssignOperation.To>
-                                        <ui:AssignOperation.Value>
-                                          <InArgument x:TypeArguments="x:Int32">[g_i_stepIdx]</InArgument>
-                                        </ui:AssignOperation.Value>
-                                      </ui:AssignOperation>
-                                      <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_17">
-                                        <ui:AssignOperation.To>
-                                          <OutArgument x:TypeArguments="x:Int32">[g_i_stepIdx]</OutArgument>
-                                        </ui:AssignOperation.To>
-                                        <ui:AssignOperation.Value>
-                                          <InArgument x:TypeArguments="x:Int32">[g_i_stepIdx+1]</InArgument>
-                                        </ui:AssignOperation.Value>
-                                      </ui:AssignOperation>
-                                    </scg:List>
-                                  </ui:MultipleAssign.AssignOperations>
-                                </ui:MultipleAssign>
-                              </Sequence>
-                            </FlowStep>
-                          </FlowStep.Next>
-                        </FlowStep>
-                        <FlowStep x:Key="2" x:Name="__ReferenceID3">
-                          <sap:WorkflowViewStateService.ViewState>
-                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                              <av:Point x:Key="ShapeLocation">235,535</av:Point>
-                              <av:Size x:Key="ShapeSize">200,112</av:Size>
-                              <av:PointCollection x:Key="ConnectorLocation">435,591 465,591 465,509 595,509</av:PointCollection>
-                            </scg:Dictionary>
-                          </sap:WorkflowViewStateService.ViewState>
-                          <Sequence sap2010:Annotation.AnnotationText="실패건 전송" DisplayName="Step2" sap:VirtualizedContainerService.HintSize="496,377" sap2010:WorkflowViewState.IdRef="Sequence_52">
-                            <Sequence.Variables>
-                              <Variable x:TypeArguments="x:String" Name="io_dt_" />
-                              <Variable x:TypeArguments="x:Boolean" Name="b_stdExcelExi" />
-                            </Sequence.Variables>
-                            <sap:WorkflowViewStateService.ViewState>
-                              <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                                <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
-                              </scg:Dictionary>
-                            </sap:WorkflowViewStateService.ViewState>
-                            <Assign sap:VirtualizedContainerService.HintSize="434,82" sap2010:WorkflowViewState.IdRef="Assign_14">
-                              <Assign.To>
-                                <OutArgument x:TypeArguments="x:Int32">[g_i_perStepIdx]</OutArgument>
-                              </Assign.To>
-                              <Assign.Value>
-                                <InArgument x:TypeArguments="x:Int32">1</InArgument>
-                              </Assign.Value>
-                            </Assign>
-                            <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Step_2.xaml - Invoke Workflow File" sap:VirtualizedContainerService.HintSize="434,113" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_12" LogEntry="No" LogExit="No" UnSafe="False" WorkflowFileName="Step\Step_2.xaml">
-                              <ui:InvokeWorkflowFile.Arguments>
-                                <InArgument x:TypeArguments="scg:Dictionary(x:String, x:Object)" x:Key="in_Config">[in_Config]</InArgument>
-                                <InArgument x:TypeArguments="x:String" x:Key="in_s_startDate">[io_s_startDateTime]</InArgument>
-                                <InArgument x:TypeArguments="scg:Dictionary(x:String, x:Object)" x:Key="in_out_param">[in_out_param]</InArgument>
-                              </ui:InvokeWorkflowFile.Arguments>
-                            </ui:InvokeWorkflowFile>
-                          </Sequence>
-                          <FlowStep.Next>
                             <x:Reference>__ReferenceID0</x:Reference>
                           </FlowStep.Next>
                         </FlowStep>
@@ -434,14 +433,14 @@
                               <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                             </scg:Dictionary>
                           </sap:WorkflowViewStateService.ViewState>
-                          <If sap2010:Annotation.AnnotationText="Error 이후 선행작업이 필요하면 else실행&#xA;" Condition="[g_i_perStepIdx = 0]" sap:VirtualizedContainerService.HintSize="579,284" sap2010:WorkflowViewState.IdRef="If_1">
+                          <If sap2010:Annotation.AnnotationText="Error 이후 선행작업이 필요하면 else실행&#xA;" Condition="[g_i_perStepIdx = 0]" sap:VirtualizedContainerService.HintSize="579,282" sap2010:WorkflowViewState.IdRef="If_1">
                             <sap:WorkflowViewStateService.ViewState>
                               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                 <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
                               </scg:Dictionary>
                             </sap:WorkflowViewStateService.ViewState>
                             <If.Else>
-                              <Assign sap:VirtualizedContainerService.HintSize="434,82" sap2010:WorkflowViewState.IdRef="Assign_1">
+                              <Assign sap:VirtualizedContainerService.HintSize="434,81" sap2010:WorkflowViewState.IdRef="Assign_1">
                                 <Assign.To>
                                   <OutArgument x:TypeArguments="x:Int32">[g_i_perStepIdx]</OutArgument>
                                 </Assign.To>
@@ -451,7 +450,7 @@
                               </Assign>
                             </If.Else>
                           </If>
-                          <Assign sap:VirtualizedContainerService.HintSize="579,82" sap2010:WorkflowViewState.IdRef="Assign_2">
+                          <Assign sap:VirtualizedContainerService.HintSize="579,81" sap2010:WorkflowViewState.IdRef="Assign_2">
                             <Assign.To>
                               <OutArgument x:TypeArguments="x:String">[g_s_logText]</OutArgument>
                             </Assign.To>
@@ -482,7 +481,7 @@
                         <av:Size x:Key="ShapeSize">200,81</av:Size>
                       </scg:Dictionary>
                     </sap:WorkflowViewStateService.ViewState>
-                    <Sequence DisplayName="결과메일 발송" sap:VirtualizedContainerService.HintSize="493,2081" sap2010:WorkflowViewState.IdRef="Sequence_46">
+                    <Sequence DisplayName="결과메일 발송" sap:VirtualizedContainerService.HintSize="200,81" sap2010:WorkflowViewState.IdRef="Sequence_46">
                       <Sequence.Variables>
                         <Variable x:TypeArguments="x:String" Name="s_maileTo" />
                         <Variable x:TypeArguments="x:String" Name="s_maileCc" />
@@ -544,7 +543,7 @@
                       <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="431,92" sap2010:WorkflowViewState.IdRef="LogMessage_14" Level="Info" Message="[io_s_startDateTime]" />
                       <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="431,92" sap2010:WorkflowViewState.IdRef="LogMessage_15" Level="Info" Message="[&quot;#io_s_startTime#&quot;]" />
                       <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="431,92" sap2010:WorkflowViewState.IdRef="LogMessage_12" Level="Info" Message="[io_s_startTime]" />
-                      <ui:SendMail Bcc="{x:Null}" MailMessage="{x:Null}" ReplyTo="{x:Null}" SecurePassword="{x:Null}" TimeoutMS="{x:Null}" UseOAuth="{x:Null}" Body="[s_maileTxt]" Cc="[s_maileCc]" DisplayName="Send SMTP Mail Message" Email="rpa001@cowellfashion.co.kr" EnableSSL="True" From="rpa001@cowellfashion.co.kr" sap:VirtualizedContainerService.HintSize="431,152" sap2010:WorkflowViewState.IdRef="SendMail_3" IgnoreCRL="False" IsBodyHtml="False" Name="사방넷재고전송" Password="cowell2023!!" Port="25" SecureConnection="Auto" Server="riskmng.cowellfashion.co.kr" Subject="[s_maileTitle]" To="[s_maileTo]">
+                      <ui:SendMail Bcc="{x:Null}" MailMessage="{x:Null}" ReplyTo="{x:Null}" SecurePassword="{x:Null}" TimeoutMS="{x:Null}" UseOAuth="{x:Null}" Body="[s_maileTxt]" Cc="[s_maileCc]" DisplayName="Send SMTP Mail Message" Email="rpa001@cowellfashion.co.kr" EnableSSL="True" From="rpa001@cowellfashion.co.kr" sap:VirtualizedContainerService.HintSize="431,149" sap2010:WorkflowViewState.IdRef="SendMail_3" IgnoreCRL="False" IsBodyHtml="False" Name="사방넷재고전송" Password="cowell2023!!" Port="25" SecureConnection="Auto" Server="riskmng.cowellfashion.co.kr" Subject="[s_maileTitle]" To="[s_maileTo]">
                         <ui:SendMail.Files>
                           <scg:List x:TypeArguments="InArgument(x:String)" Capacity="0" />
                         </ui:SendMail.Files>
