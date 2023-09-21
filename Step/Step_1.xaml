@@ -1055,7 +1055,7 @@
                           <av:PointCollection x:Key="ConnectorLocation">463,529 413,529</av:PointCollection>
                         </scg:Dictionary>
                       </sap:WorkflowViewStateService.ViewState>
-                      <Sequence DisplayName="전송팝업 닫기" sap:VirtualizedContainerService.HintSize="200,83" sap2010:WorkflowViewState.IdRef="Sequence_240">
+                      <Sequence DisplayName="전송팝업 닫기" sap:VirtualizedContainerService.HintSize="752,3373" sap2010:WorkflowViewState.IdRef="Sequence_240">
                         <Sequence.Variables>
                           <Variable x:TypeArguments="x:Boolean" Name="b_button" />
                           <Variable x:TypeArguments="x:Boolean" Name="b_popup" />
@@ -1066,7 +1066,7 @@
                             <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                           </scg:Dictionary>
                         </sap:WorkflowViewStateService.ViewState>
-                        <Assign sap:VirtualizedContainerService.HintSize="690,83" sap2010:WorkflowViewState.IdRef="Assign_53">
+                        <Assign sap:VirtualizedContainerService.HintSize="690,82" sap2010:WorkflowViewState.IdRef="Assign_53">
                           <Assign.To>
                             <OutArgument x:TypeArguments="s:DateTime">[endStartDt]</OutArgument>
                           </Assign.To>
@@ -1074,17 +1074,17 @@
                             <InArgument x:TypeArguments="s:DateTime">[DateTime.Now]</InArgument>
                           </Assign.Value>
                         </Assign>
-                        <DoWhile DisplayName="Do While" sap:VirtualizedContainerService.HintSize="690,1040" sap2010:WorkflowViewState.IdRef="DoWhile_5">
+                        <DoWhile DisplayName="Do While" sap:VirtualizedContainerService.HintSize="690,1038" sap2010:WorkflowViewState.IdRef="DoWhile_5">
                           <DoWhile.Condition>
-                            <mva:VisualBasicValue x:TypeArguments="x:Boolean" ExpressionText="(not(b_popup) or (not b_button)) And not(in_out_param(&quot;i_sendCnt&quot;).ToString.Equals(0))" />
+                            <mva:VisualBasicValue x:TypeArguments="x:Boolean" ExpressionText="(not(b_popup) or (not b_button)) And not(in_out_param(&quot;i_sendCnt&quot;).ToString.Equals(&quot;0&quot;))" />
                           </DoWhile.Condition>
-                          <Sequence sap:VirtualizedContainerService.HintSize="548,874" sap2010:WorkflowViewState.IdRef="Sequence_315">
+                          <Sequence sap:VirtualizedContainerService.HintSize="548,873" sap2010:WorkflowViewState.IdRef="Sequence_315">
                             <sap:WorkflowViewStateService.ViewState>
                               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                               </scg:Dictionary>
                             </sap:WorkflowViewStateService.ViewState>
-                            <If Condition="[(DateTime.Now-endStartDt).TotalMinutes &gt; 30]" sap:VirtualizedContainerService.HintSize="486,469" sap2010:WorkflowViewState.IdRef="If_13">
+                            <If Condition="[(DateTime.Now-endStartDt).TotalMinutes &gt; 30]" sap:VirtualizedContainerService.HintSize="486,468" sap2010:WorkflowViewState.IdRef="If_13">
                               <If.Then>
                                 <Sequence sap:VirtualizedContainerService.HintSize="450,277" sap2010:WorkflowViewState.IdRef="Sequence_316">
                                   <sap:WorkflowViewStateService.ViewState>
@@ -1128,7 +1128,7 @@
                             </ui:UiElementExists>
                           </Sequence>
                         </DoWhile>
-                        <Assign sap:VirtualizedContainerService.HintSize="690,83" sap2010:WorkflowViewState.IdRef="Assign_78">
+                        <Assign sap:VirtualizedContainerService.HintSize="690,82" sap2010:WorkflowViewState.IdRef="Assign_78">
                           <Assign.To>
                             <OutArgument x:TypeArguments="s:DateTime">[endStartDt]</OutArgument>
                           </Assign.To>
@@ -1136,7 +1136,7 @@
                             <InArgument x:TypeArguments="s:DateTime">[DateTime.Now]</InArgument>
                           </Assign.Value>
                         </Assign>
-                        <DoWhile DisplayName="Do While" sap:VirtualizedContainerService.HintSize="690,1941" sap2010:WorkflowViewState.IdRef="DoWhile_1" Condition="[b_button Or b_popup]">
+                        <DoWhile DisplayName="Do While" sap:VirtualizedContainerService.HintSize="690,1940" sap2010:WorkflowViewState.IdRef="DoWhile_1" Condition="[b_button Or b_popup]">
                           <Sequence sap:VirtualizedContainerService.HintSize="644,1775" sap2010:WorkflowViewState.IdRef="Sequence_244">
                             <sap:WorkflowViewStateService.ViewState>
                               <scg:Dictionary x:TypeArguments="x:String, x:Object">
