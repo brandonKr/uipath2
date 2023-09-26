@@ -6,7 +6,7 @@
   "dependencies": {
     "UiPath.Excel.Activities": "[2.16.0]",
     "UiPath.Mail.Activities": "[1.18.1]",
-    "UiPath.System.Activities": "[22.10.3]",
+    "UiPath.System.Activities": "[22.4.0]",
     "UiPath.UIAutomation.Activities": "[22.10.3]"
   },
   "webServices": [],
@@ -43,7 +43,8 @@
       "ignoredFiles": []
     },
     "fileInfoCollection": [],
-    "modernBehavior": false
+    "modernBehavior": false,
+    "saveToCloud": false
   },
   "expressionLanguage": "VisualBasic",
   "entryPoints": [
