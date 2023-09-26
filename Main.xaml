@@ -592,7 +592,7 @@
                                                 <OutArgument x:TypeArguments="x:String">[s_mailSender]</OutArgument>
                                               </ui:AssignOperation.To>
                                               <ui:AssignOperation.Value>
-                                                <InArgument x:TypeArguments="x:String">[Config.Item("attr06").ToString]</InArgument>
+                                                <InArgument x:TypeArguments="x:String">[Config.Item("attr25").ToString]</InArgument>
                                               </ui:AssignOperation.Value>
                                             </ui:AssignOperation>
                                             <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_22">
@@ -636,7 +636,11 @@
                                       <ui:SaveImage DisplayName="Save Image" FileName="[ErrorPrtSc]" sap:VirtualizedContainerService.HintSize="434,133" sap2010:WorkflowViewState.IdRef="SaveImage_1" Image="[ImgError]" />
                                       <ui:SendMail Bcc="{x:Null}" Cc="{x:Null}" MailMessage="{x:Null}" ReplyTo="{x:Null}" SecurePassword="{x:Null}" TimeoutMS="{x:Null}" UseOAuth="{x:Null}" Body="[s_mailBody]" DisplayName="Send SMTP Mail Message" Email="rpa001@cowellfashion.co.kr" EnableSSL="True" From="rpa001@cowellfashion.co.kr" sap:VirtualizedContainerService.HintSize="434,152" sap2010:WorkflowViewState.IdRef="SendMail_1" IgnoreCRL="False" IsBodyHtml="False" Name="사방넷운송장송신" Password="cowell2023!!" Port="25" SecureConnection="Auto" Server="riskmng.cowellfashion.co.kr" Subject="[s_mailTitle]" To="[s_mailSender]">
                                         <ui:SendMail.Files>
-                                          <scg:List x:TypeArguments="InArgument(x:String)" Capacity="0" />
+                                          <scg:List x:TypeArguments="InArgument(x:String)" Capacity="4">
+                                            <InArgument x:TypeArguments="x:String">
+                                              <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="ErrorPrtSc" />
+                                            </InArgument>
+                                          </scg:List>
                                         </ui:SendMail.Files>
                                       </ui:SendMail>
                                     </Sequence>
