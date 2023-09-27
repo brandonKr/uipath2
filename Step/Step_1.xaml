@@ -7,7 +7,7 @@
   <mva:VisualBasic.Settings>
     <x:Null />
   </mva:VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>1011,844</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>1234,794</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>Step_1_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <scg:List x:TypeArguments="x:String" Capacity="42">
@@ -91,7 +91,6 @@
       <AssemblyReference>UiPath.UIAutomationNext</AssemblyReference>
       <AssemblyReference>WindowsBase</AssemblyReference>
       <AssemblyReference>Microsoft.Office.Interop.Word</AssemblyReference>
-      <AssemblyReference>System.Runtime.WindowsRuntime</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
   <Flowchart sap2010:Annotation.AnnotationText="송장전송 몰 리스트 스크래핑&#xA;" DisplayName="Step_1" sap:VirtualizedContainerService.HintSize="634,679" sap2010:WorkflowViewState.IdRef="Flowchart_1">
@@ -124,7 +123,7 @@
           <av:PointCollection x:Key="ConnectorLocation">290,208.5 290,258.5</av:PointCollection>
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
-      <Sequence DisplayName="메뉴이동" sap:VirtualizedContainerService.HintSize="200,81" sap2010:WorkflowViewState.IdRef="Sequence_28">
+      <Sequence DisplayName="메뉴이동" sap:VirtualizedContainerService.HintSize="804,4959" sap2010:WorkflowViewState.IdRef="Sequence_28">
         <Sequence.Variables>
           <Variable x:TypeArguments="s:DateTime" Name="d_nowDate" />
           <Variable x:TypeArguments="ui:Browser" Name="br_sbHome" />
@@ -134,13 +133,13 @@
             <x:Boolean x:Key="IsExpanded">True</x:Boolean>
           </scg:Dictionary>
         </sap:WorkflowViewStateService.ViewState>
-        <ui:OpenBrowser AutomaticallyDownloadWebDriver="{x:Null}" CommunicationMethod="{x:Null}" Hidden="{x:Null}" Private="{x:Null}" BrowserType="Chrome" DisplayName="Open Browser" sap:VirtualizedContainerService.HintSize="742,1953" sap2010:WorkflowViewState.IdRef="OpenBrowser_1" NewSession="True" UiBrowser="[br_sbHome]" Url="https://www.sabangnet.co.kr/new_home/">
+        <ui:OpenBrowser AutomaticallyDownloadWebDriver="{x:Null}" CommunicationMethod="{x:Null}" Hidden="{x:Null}" Private="{x:Null}" BrowserType="Chrome" DisplayName="Open Browser" sap:VirtualizedContainerService.HintSize="742,1954" sap2010:WorkflowViewState.IdRef="OpenBrowser_1" NewSession="True" UiBrowser="[br_sbHome]" Url="https://www.sabangnet.co.kr/new_home/">
           <ui:OpenBrowser.Body>
             <ActivityAction x:TypeArguments="x:Object">
               <ActivityAction.Argument>
                 <DelegateInArgument x:TypeArguments="x:Object" Name="ContextTarget" />
               </ActivityAction.Argument>
-              <Sequence DisplayName="실행" sap:VirtualizedContainerService.HintSize="563,1851" sap2010:WorkflowViewState.IdRef="Sequence_229">
+              <Sequence DisplayName="실행" sap:VirtualizedContainerService.HintSize="563,1852" sap2010:WorkflowViewState.IdRef="Sequence_229">
                 <Sequence.Variables>
                   <Variable x:TypeArguments="x:Boolean" Name="b_loginSta" />
                 </Sequence.Variables>
@@ -170,7 +169,7 @@
                     </ui:Target>
                   </ui:UiElementExists.Target>
                 </ui:UiElementExists>
-                <ui:IfElseIf DisplayName="Else If" sap:VirtualizedContainerService.HintSize="501,979" sap2010:WorkflowViewState.IdRef="IfElseIf_13">
+                <ui:IfElseIf DisplayName="Else If" sap:VirtualizedContainerService.HintSize="501,980" sap2010:WorkflowViewState.IdRef="IfElseIf_13">
                   <ui:IfElseIf.ConditionBlocks>
                     <sc:BindingList x:TypeArguments="ui:IfElseIfBlock" AllowEdit="True" AllowNew="True" AllowRemove="True" RaiseListChangedEvents="True">
                       <ui:IfElseIfBlock BlockType="If" Condition="[b_loginSta And not b_tran_alt]">
@@ -208,7 +207,7 @@
                                 </ui:Target>
                               </ui:SendHotkey.Target>
                             </ui:SendHotkey>
-                            <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click 'BUTTON'" sap:VirtualizedContainerService.HintSize="388,107" sap2010:WorkflowViewState.IdRef="Click_112" KeyModifiers="None" MouseButton="BTN_LEFT">
+                            <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click 'BUTTON'" sap:VirtualizedContainerService.HintSize="388,107" sap2010:WorkflowViewState.IdRef="Click_112" KeyModifiers="None" MouseButton="BTN_LEFT" SimulateClick="True">
                               <ui:Click.CursorPosition>
                                 <ui:CursorPosition Position="Center">
                                   <ui:CursorPosition.OffsetX>
@@ -282,7 +281,7 @@
             </ui:Target>
           </ui:UiElementExists.Target>
         </ui:UiElementExists>
-        <If Condition="[Not(b_tran_alt)]" sap:VirtualizedContainerService.HintSize="742,579" sap2010:WorkflowViewState.IdRef="If_8">
+        <If Condition="[Not(b_tran_alt)]" sap:VirtualizedContainerService.HintSize="742,580" sap2010:WorkflowViewState.IdRef="If_8">
           <If.Then>
             <Sequence sap:VirtualizedContainerService.HintSize="546,391" sap2010:WorkflowViewState.IdRef="Sequence_254">
               <sap:WorkflowViewStateService.ViewState>
