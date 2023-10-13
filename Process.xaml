@@ -15,7 +15,7 @@
   <mva:VisualBasic.Settings>
     <x:Null />
   </mva:VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>1244,1131</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>1234,1127</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>ProcessTransaction_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <scg:List x:TypeArguments="x:String" Capacity="78">
@@ -103,7 +103,7 @@
       <AssemblyReference>System.Runtime.WindowsRuntime</AssemblyReference>
     </scg:List>
   </TextExpression.ReferencesForImplementation>
-  <Sequence sap2010:Annotation.AnnotationText="" DisplayName="Process" sap:VirtualizedContainerService.HintSize="822,1066" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence sap2010:Annotation.AnnotationText="" DisplayName="Process" sap:VirtualizedContainerService.HintSize="822,1062" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="x:Int32" Name="g_i_stepIdx" />
       <Variable x:TypeArguments="x:Int32" Name="g_i_perStepIdx" />
@@ -120,7 +120,7 @@
         <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <TryCatch DisplayName="Try Catch" sap:VirtualizedContainerService.HintSize="760,924" sap2010:WorkflowViewState.IdRef="TryCatch_1">
+    <TryCatch DisplayName="Try Catch" sap:VirtualizedContainerService.HintSize="760,920" sap2010:WorkflowViewState.IdRef="TryCatch_1">
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
           <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -134,7 +134,7 @@
               <x:Boolean x:Key="IsPinned">False</x:Boolean>
               <av:Point x:Key="ShapeLocation">0,62.5</av:Point>
               <av:Size x:Key="ShapeSize">60,75</av:Size>
-              <av:PointCollection x:Key="ConnectorLocation">60,100 90,100 90,107.5 200,107.5</av:PointCollection>
+              <av:PointCollection x:Key="ConnectorLocation">60,100 90,100 90,103 200,103</av:PointCollection>
               <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
               <x:Double x:Key="Width">688</x:Double>
             </scg:Dictionary>
@@ -146,11 +146,11 @@
             <sap:WorkflowViewStateService.ViewState>
               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                 <av:Point x:Key="ShapeLocation">200,4</av:Point>
-                <av:Size x:Key="ShapeSize">200,207</av:Size>
-                <av:PointCollection x:Key="ConnectorLocation">300,211 300,351.5</av:PointCollection>
+                <av:Size x:Key="ShapeSize">200,198</av:Size>
+                <av:PointCollection x:Key="ConnectorLocation">300,202 300,351.5</av:PointCollection>
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
-            <Sequence sap2010:Annotation.AnnotationText="초기변수설정&#xA;g_i_stepIdx : 진행 step컨트롤&#xA;g_i_perStepIdx : 선행 step컨트롤(선행작업 없으면 0)&#xA;g_i_finalStepIdx : 총 step 컨트롤&#xA;" DisplayName="InitProcess" sap:VirtualizedContainerService.HintSize="594,1249" sap2010:WorkflowViewState.IdRef="Sequence_2">
+            <Sequence sap2010:Annotation.AnnotationText="초기변수설정&#xA;g_i_stepIdx : 진행 step컨트롤&#xA;g_i_perStepIdx : 선행 step컨트롤(선행작업 없으면 0)&#xA;g_i_finalStepIdx : 총 step 컨트롤&#xA;" DisplayName="InitProcess" sap:VirtualizedContainerService.HintSize="200,198" sap2010:WorkflowViewState.IdRef="Sequence_2">
               <sap:WorkflowViewStateService.ViewState>
                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
                   <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -412,15 +412,9 @@
                             </Assign>
                             <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Step_1.xaml - Invoke Workflow File" sap:VirtualizedContainerService.HintSize="434,114" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_11" LogEntry="No" LogExit="No" UnSafe="False" WorkflowFileName="Step\Step_1.xaml">
                               <ui:InvokeWorkflowFile.Arguments>
-                                <InArgument x:TypeArguments="scg:Dictionary(x:String, x:Object)" x:Key="in_Config">
-                                  <mva:VisualBasicValue x:TypeArguments="scg:Dictionary(x:String, x:Object)" ExpressionText="in_Config" />
-                                </InArgument>
-                                <InArgument x:TypeArguments="x:String" x:Key="in_s_startDate">
-                                  <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="io_s_startDateTime" />
-                                </InArgument>
-                                <InArgument x:TypeArguments="scg:Dictionary(x:String, x:Object)" x:Key="in_out_param">
-                                  <mva:VisualBasicValue x:TypeArguments="scg:Dictionary(x:String, x:Object)" ExpressionText="in_out_param" />
-                                </InArgument>
+                                <InArgument x:TypeArguments="scg:Dictionary(x:String, x:Object)" x:Key="in_Config">[in_Config]</InArgument>
+                                <InArgument x:TypeArguments="x:String" x:Key="in_s_startDate">[io_s_startDateTime]</InArgument>
+                                <InArgument x:TypeArguments="scg:Dictionary(x:String, x:Object)" x:Key="in_out_param">[in_out_param]</InArgument>
                               </ui:InvokeWorkflowFile.Arguments>
                             </ui:InvokeWorkflowFile>
                           </Sequence>
@@ -608,10 +602,10 @@
                     <sap:WorkflowViewStateService.ViewState>
                       <scg:Dictionary x:TypeArguments="x:String, x:Object">
                         <av:Point x:Key="ShapeLocation">388,354.5</av:Point>
-                        <av:Size x:Key="ShapeSize">200,83</av:Size>
+                        <av:Size x:Key="ShapeSize">200,81</av:Size>
                       </scg:Dictionary>
                     </sap:WorkflowViewStateService.ViewState>
-                    <Sequence DisplayName="결과메일 발송" sap:VirtualizedContainerService.HintSize="200,83" sap2010:WorkflowViewState.IdRef="Sequence_46">
+                    <Sequence DisplayName="결과메일 발송" sap:VirtualizedContainerService.HintSize="493,2078" sap2010:WorkflowViewState.IdRef="Sequence_46">
                       <Sequence.Variables>
                         <Variable x:TypeArguments="x:String" Name="s_maileTo" />
                         <Variable x:TypeArguments="x:String" Name="s_maileCc" />
@@ -655,7 +649,7 @@
                                 <OutArgument x:TypeArguments="x:String">[s_maileTxt]</OutArgument>
                               </ui:AssignOperation.To>
                               <ui:AssignOperation.Value>
-                                <InArgument x:TypeArguments="x:String">[in_Config("attr28").ToString.Replace("$startTime",io_s_startTime).Replace("$endTime",DateTime.Now.ToString("HH:mm:ss")).Replace("$spenTime",(Convert.ToDateTime(Datetime.Now.ToString("HH:mm:ss"))-Convert.ToDateTime(io_s_startTime)).ToString()).Replace("$coment1","["+System.Net.Dns.GetHostName+"]").Replace("$coment2","전송 : "+in_out_param("i_sendCnt").ToString+Environment.NewLine+"재전송 : "+in_out_param("i_resendCnt").ToString).Replace("$manager",in_Config("attr24").ToString).Replace("$Maile",in_Config("attr26").ToString).Replace("$Phone",in_Config("attr26").ToString)]</InArgument>
+                                <InArgument x:TypeArguments="x:String">[in_Config("attr28").ToString.Replace("$startTime",io_s_startTime).Replace("$endTime",DateTime.Now.ToString("HH:mm:ss")).Replace("$spenTime",(Convert.ToDateTime(Datetime.Now.ToString("HH:mm:ss"))-Convert.ToDateTime(io_s_startTime)).ToString()).Replace("$coment1","["+System.Net.Dns.GetHostName+"]").Replace("$coment2","전송 : "+in_out_param("i_sendCnt").ToString+Environment.NewLine+"재전송 : "+in_out_param("i_resendCnt").ToString).Replace("$manager",in_Config("attr24").ToString).Replace("$Maile",in_Config("attr25").ToString).Replace("$Phone",in_Config("attr26").ToString)]</InArgument>
                               </ui:AssignOperation.Value>
                             </ui:AssignOperation>
                           </scg:List>

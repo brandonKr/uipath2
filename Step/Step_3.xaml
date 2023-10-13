@@ -342,7 +342,7 @@
           <av:PointCollection x:Key="ConnectorLocation">150,339 150,391</av:PointCollection>
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
-      <Sequence DisplayName="개별전송" sap:VirtualizedContainerService.HintSize="984,6169" sap2010:WorkflowViewState.IdRef="Sequence_300">
+      <Sequence DisplayName="개별전송" sap:VirtualizedContainerService.HintSize="984,5398" sap2010:WorkflowViewState.IdRef="Sequence_300">
         <Sequence.Variables>
           <Variable x:TypeArguments="x:Int32" Name="i_page" />
           <Variable x:TypeArguments="x:String" Name="mall" />
@@ -369,14 +369,14 @@
             <InArgument x:TypeArguments="x:String">[mallList.Item(i_mallIndex)]</InArgument>
           </Assign.Value>
         </Assign>
-        <DoWhile DisplayName="Do While" sap:VirtualizedContainerService.HintSize="922,5692" sap2010:WorkflowViewState.IdRef="DoWhile_4" Condition="[Not b_isFinish]">
-          <ui:OpenBrowser AutomaticallyDownloadWebDriver="{x:Null}" CommunicationMethod="{x:Null}" Hidden="{x:Null}" Private="{x:Null}" UiBrowser="{x:Null}" BrowserType="Chrome" DisplayName="Open Browser" sap:VirtualizedContainerService.HintSize="876,5528" sap2010:WorkflowViewState.IdRef="OpenBrowser_4" NewSession="True" Url="[in_Config(&quot;attr05&quot;).ToString]">
+        <DoWhile DisplayName="Do While" sap:VirtualizedContainerService.HintSize="922,4921" sap2010:WorkflowViewState.IdRef="DoWhile_4" Condition="[Not b_isFinish]">
+          <ui:OpenBrowser AutomaticallyDownloadWebDriver="{x:Null}" CommunicationMethod="{x:Null}" Hidden="{x:Null}" Private="{x:Null}" UiBrowser="{x:Null}" BrowserType="Chrome" DisplayName="Open Browser" sap:VirtualizedContainerService.HintSize="876,4757" sap2010:WorkflowViewState.IdRef="OpenBrowser_4" NewSession="True" Url="[in_Config(&quot;attr05&quot;).ToString]">
             <ui:OpenBrowser.Body>
               <ActivityAction x:TypeArguments="x:Object">
                 <ActivityAction.Argument>
                   <DelegateInArgument x:TypeArguments="x:Object" Name="ContextTarget" />
                 </ActivityAction.Argument>
-                <Sequence DisplayName="실행" sap:VirtualizedContainerService.HintSize="842,5426" sap2010:WorkflowViewState.IdRef="Sequence_301">
+                <Sequence DisplayName="실행" sap:VirtualizedContainerService.HintSize="842,4655" sap2010:WorkflowViewState.IdRef="Sequence_301">
                   <Sequence.Variables>
                     <Variable x:TypeArguments="x:String" Name="s_count" />
                     <Variable x:TypeArguments="x:String" Name="s_lodingStryle" />
@@ -567,9 +567,9 @@
                       <InArgument x:TypeArguments="x:Int32">[Convert.ToInt32(Math.Ceiling(Double.Parse(System.Text.RegularExpressions.Regex.Replace(s_count,"[^0-9]", String.Empty))/S_SEND_CNT))]</InArgument>
                     </Assign.Value>
                   </Assign>
-                  <If Condition="[i_pageIndex&gt;1]" DisplayName="If - 페이지 이동" sap:VirtualizedContainerService.HintSize="780,1744" sap2010:WorkflowViewState.IdRef="If_15">
+                  <If Condition="[i_pageIndex&gt;1]" DisplayName="If - 페이지 이동" sap:VirtualizedContainerService.HintSize="780,973" sap2010:WorkflowViewState.IdRef="If_15">
                     <If.Then>
-                      <Sequence sap:VirtualizedContainerService.HintSize="548,1557" sap2010:WorkflowViewState.IdRef="Sequence_324">
+                      <Sequence sap:VirtualizedContainerService.HintSize="548,786" sap2010:WorkflowViewState.IdRef="Sequence_324">
                         <Sequence.Variables>
                           <Variable x:TypeArguments="x:Boolean" Name="b_page" />
                         </Sequence.Variables>
@@ -578,164 +578,6 @@
                             <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                           </scg:Dictionary>
                         </sap:WorkflowViewStateService.ViewState>
-                        <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="486,731" sap2010:WorkflowViewState.IdRef="CommentOut_56">
-                          <ui:CommentOut.Body>
-                            <Sequence DisplayName="무시된 액티비티" sap:VirtualizedContainerService.HintSize="450,652" sap2010:WorkflowViewState.IdRef="Sequence_330">
-                              <sap:WorkflowViewStateService.ViewState>
-                                <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
-                                </scg:Dictionary>
-                              </sap:WorkflowViewStateService.ViewState>
-                              <ui:UiElementExists DisplayName="Element Exists 'LI'" Exists="[b_page]" sap:VirtualizedContainerService.HintSize="388,107" sap2010:WorkflowViewState.IdRef="UiElementExists_29">
-                                <ui:UiElementExists.Target>
-                                  <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="3db79d3e-5408-4228-b759-a013c302c2c6" InformativeScreenshot="d4f3eb41a92bacf059b3e7993428e372" Selector="[string.Format(&quot;&lt;webctrl parentid='app' tag='DIV' class='el-pagination is-background' /&gt;&lt;webctrl parentid='app' tag='LI' parentclass='el-pager' aaname='{0}' innertext='{0}' visibleinnertext='{0}' /&gt;&quot;, i_pageIndex)]">
-                                    <ui:Target.TimeoutMS>
-                                      <InArgument x:TypeArguments="x:Int32" />
-                                    </ui:Target.TimeoutMS>
-                                    <ui:Target.WaitForReady>
-                                      <InArgument x:TypeArguments="ui:WaitForReady" />
-                                    </ui:Target.WaitForReady>
-                                  </ui:Target>
-                                </ui:UiElementExists.Target>
-                              </ui:UiElementExists>
-                              <If Condition="[not b_page]" DisplayName="If - 페이지 존재 확인" sap:VirtualizedContainerService.HintSize="388,52" sap2010:WorkflowViewState.IdRef="If_14">
-                                <sap:WorkflowViewStateService.ViewState>
-                                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                    <x:Boolean x:Key="IsExpanded">False</x:Boolean>
-                                    <x:Boolean x:Key="IsPinned">False</x:Boolean>
-                                  </scg:Dictionary>
-                                </sap:WorkflowViewStateService.ViewState>
-                                <If.Then>
-                                  <Sequence sap:VirtualizedContainerService.HintSize="646,1166" sap2010:WorkflowViewState.IdRef="Sequence_327">
-                                    <sap:WorkflowViewStateService.ViewState>
-                                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                                      </scg:Dictionary>
-                                    </sap:WorkflowViewStateService.ViewState>
-                                    <ui:InterruptibleDoWhile CurrentIndex="{x:Null}" Condition="[Not b_page]" DisplayName="Do While" sap:VirtualizedContainerService.HintSize="584,1055" sap2010:WorkflowViewState.IdRef="InterruptibleDoWhile_26">
-                                      <ui:InterruptibleDoWhile.Body>
-                                        <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="548,889" sap2010:WorkflowViewState.IdRef="Sequence_326">
-                                          <sap:WorkflowViewStateService.ViewState>
-                                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                                            </scg:Dictionary>
-                                          </sap:WorkflowViewStateService.ViewState>
-                                          <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click 'LI'" sap:VirtualizedContainerService.HintSize="486,107" sap2010:WorkflowViewState.IdRef="Click_170" KeyModifiers="None" MouseButton="BTN_LEFT" SimulateClick="True">
-                                            <ui:Click.CursorPosition>
-                                              <ui:CursorPosition Position="Center">
-                                                <ui:CursorPosition.OffsetX>
-                                                  <InArgument x:TypeArguments="x:Int32" />
-                                                </ui:CursorPosition.OffsetX>
-                                                <ui:CursorPosition.OffsetY>
-                                                  <InArgument x:TypeArguments="x:Int32" />
-                                                </ui:CursorPosition.OffsetY>
-                                              </ui:CursorPosition>
-                                            </ui:Click.CursorPosition>
-                                            <ui:Click.Target>
-                                              <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="089baafe-30c5-447e-990e-6123f13b3f13" InformativeScreenshot="9396a77f7b6be041a8966e39aa5b7a00" Selector="&lt;webctrl parentid='app' tag='DIV' class='el-pagination is-background' /&gt;&lt;webctrl parentid='app' tag='LI' class='el-icon more btn-quicknext el-icon-more' parentclass='el-pager' /&gt;">
-                                                <ui:Target.TimeoutMS>
-                                                  <InArgument x:TypeArguments="x:Int32" />
-                                                </ui:Target.TimeoutMS>
-                                                <ui:Target.WaitForReady>
-                                                  <InArgument x:TypeArguments="ui:WaitForReady" />
-                                                </ui:Target.WaitForReady>
-                                              </ui:Target>
-                                            </ui:Click.Target>
-                                          </ui:Click>
-                                          <ui:InterruptibleDoWhile CurrentIndex="{x:Null}" Condition="[s_lodingStryle.Replace(&quot; &quot;,&quot;&quot;).IndexOf(&quot;display:none&quot;) &lt; 0]" DisplayName="Do While" sap:VirtualizedContainerService.HintSize="486,484" sap2010:WorkflowViewState.IdRef="InterruptibleDoWhile_25">
-                                            <ui:InterruptibleDoWhile.Body>
-                                              <Sequence DisplayName="본문" sap:VirtualizedContainerService.HintSize="450,316" sap2010:WorkflowViewState.IdRef="Sequence_325">
-                                                <sap:WorkflowViewStateService.ViewState>
-                                                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                                                  </scg:Dictionary>
-                                                </sap:WorkflowViewStateService.ViewState>
-                                                <ui:GetAttribute ContinueOnError="{x:Null}" Attribute="style" DisplayName="Get Attribute 'DIV'" sap:VirtualizedContainerService.HintSize="388,205" sap2010:WorkflowViewState.IdRef="GetAttribute_15">
-                                                  <ui:GetAttribute.Result>
-                                                    <OutArgument x:TypeArguments="x:String">[s_lodingStryle]</OutArgument>
-                                                  </ui:GetAttribute.Result>
-                                                  <ui:GetAttribute.Target>
-                                                    <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="1ee872cd-b794-4ee2-9c19-a36ac28f5c40" InformativeScreenshot="3d3f0cb57d47527fb32ea5f71d436558" Selector="&lt;webctrl class='*el-loading-mask*' parentid='app' tag='DIV' /&gt;" TimeoutMS="1000">
-                                                      <ui:Target.WaitForReady>
-                                                        <InArgument x:TypeArguments="ui:WaitForReady" />
-                                                      </ui:Target.WaitForReady>
-                                                    </ui:Target>
-                                                  </ui:GetAttribute.Target>
-                                                </ui:GetAttribute>
-                                              </Sequence>
-                                            </ui:InterruptibleDoWhile.Body>
-                                            <sap:WorkflowViewStateService.ViewState>
-                                              <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                                                <x:Boolean x:Key="IsPinned">False</x:Boolean>
-                                              </scg:Dictionary>
-                                            </sap:WorkflowViewStateService.ViewState>
-                                          </ui:InterruptibleDoWhile>
-                                          <ui:UiElementExists DisplayName="Element Exists 'LI'" Exists="[b_page]" sap:VirtualizedContainerService.HintSize="486,107" sap2010:WorkflowViewState.IdRef="UiElementExists_30">
-                                            <ui:UiElementExists.Target>
-                                              <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="3db79d3e-5408-4228-b759-a013c302c2c6" InformativeScreenshot="d4f3eb41a92bacf059b3e7993428e372" Selector="[string.Format(&quot;&lt;webctrl parentid='app' tag='DIV' class='el-pagination is-background' /&gt;&lt;webctrl parentid='app' tag='LI' parentclass='el-pager' aaname='{0}' innertext='{0}' visibleinnertext='{0}' /&gt;&quot;, i_pageIndex)]">
-                                                <ui:Target.TimeoutMS>
-                                                  <InArgument x:TypeArguments="x:Int32" />
-                                                </ui:Target.TimeoutMS>
-                                                <ui:Target.WaitForReady>
-                                                  <InArgument x:TypeArguments="ui:WaitForReady" />
-                                                </ui:Target.WaitForReady>
-                                              </ui:Target>
-                                            </ui:UiElementExists.Target>
-                                          </ui:UiElementExists>
-                                        </Sequence>
-                                      </ui:InterruptibleDoWhile.Body>
-                                    </ui:InterruptibleDoWhile>
-                                  </Sequence>
-                                </If.Then>
-                                <If.Else>
-                                  <Sequence sap2010:WorkflowViewState.IdRef="Sequence_328">
-                                    <sap:WorkflowViewStateService.ViewState>
-                                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                                      </scg:Dictionary>
-                                    </sap:WorkflowViewStateService.ViewState>
-                                  </Sequence>
-                                </If.Else>
-                              </If>
-                              <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click 'LI'" sap:VirtualizedContainerService.HintSize="388,107" sap2010:WorkflowViewState.IdRef="Click_171" KeyModifiers="None" MouseButton="BTN_LEFT" SimulateClick="True">
-                                <ui:Click.CursorPosition>
-                                  <ui:CursorPosition Position="Center">
-                                    <ui:CursorPosition.OffsetX>
-                                      <InArgument x:TypeArguments="x:Int32" />
-                                    </ui:CursorPosition.OffsetX>
-                                    <ui:CursorPosition.OffsetY>
-                                      <InArgument x:TypeArguments="x:Int32" />
-                                    </ui:CursorPosition.OffsetY>
-                                  </ui:CursorPosition>
-                                </ui:Click.CursorPosition>
-                                <ui:Click.Target>
-                                  <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="1490d719-9d8f-4776-8bfb-4784ae28db7c" InformativeScreenshot="f4a7304ced4fb01a29158fc296f32ab0" Selector="[string.Format(&quot;&lt;webctrl parentid='app' tag='DIV' class='el-pagination is-background' /&gt;&lt;webctrl parentid='app' tag='LI' parentclass='el-pager' aaname='{0}' innertext='{0}' visibleinnertext='{0}' /&gt;&quot;, i_pageIndex)]">
-                                    <ui:Target.TimeoutMS>
-                                      <InArgument x:TypeArguments="x:Int32" />
-                                    </ui:Target.TimeoutMS>
-                                    <ui:Target.WaitForReady>
-                                      <InArgument x:TypeArguments="ui:WaitForReady" />
-                                    </ui:Target.WaitForReady>
-                                  </ui:Target>
-                                </ui:Click.Target>
-                              </ui:Click>
-                              <ui:InjectJsScript InputParameter="{x:Null}" ScriptOutput="{x:Null}" DisplayName="Inject Js Script 'DIV'" sap:VirtualizedContainerService.HintSize="388,155" sap2010:WorkflowViewState.IdRef="InjectJsScript_1" ScriptCode="[&quot;function(){&quot;+&#xD;&#xA;&quot;document.querySelector('#app &gt; div &gt; div.main-container.hasTagsView &gt; section &gt; div &gt; div.sb-table-line.el-row &gt; div:nth-child(2) &gt; div &gt; ul &gt; li:nth-child(3)').innerText='&quot;+i_page.ToString+&quot;';&quot;+&#xD;&#xA;&quot;}&quot;]">
-                                <ui:InjectJsScript.Target>
-                                  <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="9bd9347a-5a08-486f-9b11-9f9dc9fd3860" InformativeScreenshot="61e9fddbaa0e1867284ec95246abae22" Selector="&lt;html app='chrome.exe' title='쇼핑몰운송장송신 - 사방넷 리테일즈' /&gt;&lt;webctrl css-selector='body&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;section&amp;gt;div&amp;gt;div' idx='3' parentid='app' tag='DIV' /&gt;">
-                                    <ui:Target.TimeoutMS>
-                                      <InArgument x:TypeArguments="x:Int32" />
-                                    </ui:Target.TimeoutMS>
-                                    <ui:Target.WaitForReady>
-                                      <InArgument x:TypeArguments="ui:WaitForReady" />
-                                    </ui:Target.WaitForReady>
-                                  </ui:Target>
-                                </ui:InjectJsScript.Target>
-                              </ui:InjectJsScript>
-                            </Sequence>
-                          </ui:CommentOut.Body>
-                        </ui:CommentOut>
                         <ui:InjectJsScript InputParameter="{x:Null}" ScriptOutput="{x:Null}" DisplayName="Inject Js Script 'DIV'" sap:VirtualizedContainerService.HintSize="486,155" sap2010:WorkflowViewState.IdRef="InjectJsScript_3" ScriptCode="[&quot;function(){&quot;+&#xD;&#xA;&quot;&#x9;var page = document.querySelector('#app &gt; div &gt; div.main-container.hasTagsView &gt; section &gt; div &gt; div.sb-table-line.el-row &gt; div:nth-child(2) &gt; div &gt; ul &gt; li.number')&quot;+&#xD;&#xA;&quot;&#x9;page.innerText=&quot;+i_page.ToString+&quot;;&quot;+&#xD;&#xA;&quot;&#x9;page.className = 'number';&quot;+&#xD;&#xA;&quot;&#x9;page.click();&quot;+&#xD;&#xA;&quot;&#x9;page.innerText=1;&quot;+&#xD;&#xA;&quot;}&quot;]">
                           <ui:InjectJsScript.Target>
                             <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="9bd9347a-5a08-486f-9b11-9f9dc9fd3860" InformativeScreenshot="61e9fddbaa0e1867284ec95246abae22" Selector="&lt;html app='chrome.exe' title='쇼핑몰운송장송신 - 사방넷 리테일즈' /&gt;&lt;webctrl css-selector='body&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;section&amp;gt;div&amp;gt;div' idx='3' parentid='app' tag='DIV' /&gt;">
